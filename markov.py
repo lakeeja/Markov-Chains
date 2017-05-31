@@ -62,12 +62,25 @@ def make_text(chains):
 
     words = []
 
-    word_generator = choice(name of list)
-    words.append(word_generator)
-    print words
 
-    your code goes here
+    word_generator = choice(chains.keys())
+    words.append(word_generator[0])
+    words.append(word_generator[1])
+    random_word = choice(chains[word_generator])
+    words.append(random_word)
+    # print words
 
+    for item in chains:
+        new_key = (word_generator[1], random_word)
+        new_value = choice(chains[new_key])
+        new_key = (random_word, new_value)
+        new_value = choice(chains[new_key])
+
+    print new_value
+    
+    
+    print new_key
+   
     return " ".join(words)
 
 
